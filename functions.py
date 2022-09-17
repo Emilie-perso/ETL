@@ -20,7 +20,7 @@ def fetch_data(url : string, record : string):
     records = contenu[record]
     return records 
 
-def transform_data(records : list ,field : string):
+def transform_data(records : list, field : string):
     """
     Transform Data into a data frame 
 
@@ -36,7 +36,7 @@ def transform_data(records : list ,field : string):
     df_fields = pd.DataFrame.from_records(fields_list)
     return df_fields
 
-def load_data(file_name : string ,data_frame : pd.DataFrame):
+def load_data(file_name : string, data_frame : pd.DataFrame):
     """Load data into a csv file 
 
     Args:
