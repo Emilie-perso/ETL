@@ -10,14 +10,12 @@ response.raise_for_status()
 contenu = response.json()
 records = contenu["records"]
 # Transformation 
-
 df = pd.DataFrame.from_dict(records)
 
 df_cleaned = df["fields"]
-
+print(df_cleaned)
 dict_fields = df_cleaned.to_dict()
 dict_values = dict_fields.values()
 
 df_final = pd.DataFrame.from_dict(dict_values)
 
-print(df_final)
